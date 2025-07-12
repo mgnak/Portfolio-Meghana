@@ -117,101 +117,101 @@ const Projects = () => {
 
   const ProjectCard = ({ project, featured = false }) => (
     <motion.div
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6 }}
-      viewport={{ once: true }}
-      className={`glass rounded-3xl shadow-xl overflow-hidden card-hover cursor-hover ${
-        featured ? 'lg:col-span-2' : ''
-      }`}
-      whileHover={{ scale: 1.02, y: -10 }}
-    >
-      <div className="relative group">
-        <img
-          src={project.image}
-          alt={project.title}
-          className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-end justify-center pb-6">
-          <motion.button
-            onClick={() => setSelectedProject(project)}
-            className="btn-primary px-8 py-3 text-lg font-semibold rounded-2xl flex items-center gap-3 cursor-hover shadow-2xl"
-            whileHover={{ scale: 1.05, y: -3 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            <Zap className="w-5 h-5" />
-            View Details
-          </motion.button>
-        </div>
-        
-        {/* Status and Category Badges */}
-        <div className="absolute top-4 left-4 flex gap-2">
-          <span className={`px-3 py-1 rounded-full text-sm font-semibold ${getStatusColor(project.status)}`}>
-            {project.status}
-          </span>
-          <span className={`px-3 py-1 rounded-full text-sm font-semibold ${getCategoryColor(project.category)}`}>
-            {project.category}
-          </span>
-        </div>
-
-        {featured && (
-          <div className="absolute top-4 right-4 bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-3 py-1 rounded-full text-sm font-bold flex items-center gap-1">
-            <Star className="w-4 h-4 fill-current" />
-            Featured
-          </div>
-        )}
+    initial={{ opacity: 0, y: 30 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.6 }}
+    viewport={{ once: true }}
+    className={`glass rounded-3xl shadow-xl overflow-hidden card-hover cursor-hover ${
+      featured ? 'lg:col-span-2' : ''
+    }`}
+    whileHover={{ scale: 1.02, y: -10 }}
+  >
+    <div className="relative group overflow-visible">
+      <img
+        src={project.image}
+        alt={project.title}
+        className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
+      />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-end justify-center pb-6">
+        <motion.button
+          onClick={() => setSelectedProject(project)}
+          className="btn-primary px-8 py-3 text-lg font-semibold rounded-2xl flex items-center gap-3 cursor-hover shadow-2xl bg-opacity-90"
+          whileHover={{ scale: 1.05, y: -3 }}
+          whileTap={{ scale: 0.95 }}
+        >
+          <Zap className="w-5 h-5" />
+          View Details
+        </motion.button>
       </div>
       
-      <div className="p-8">
-        <h3 className="text-2xl font-bold text-slate-800 dark:text-slate-200 mb-3 cursor-hover">
-          {project.title}
-        </h3>
-        <p className="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed text-lg">
-          {project.description}
-        </p>
-        
-        <div className="flex flex-wrap gap-3 mb-6">
-          {project.tech.map((tech, index) => (
-            <motion.span
-              key={tech}
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ delay: index * 0.05, duration: 0.3 }}
-              viewport={{ once: true }}
-              className="px-4 py-2 glass rounded-2xl text-sm font-semibold text-slate-700 dark:text-slate-300 cursor-hover border border-white/30 dark:border-slate-600/30"
-              whileHover={{ scale: 1.1, y: -2 }}
-            >
-              {tech}
-            </motion.span>
-          ))}
-        </div>
-        
-        <div className="flex gap-4">
-          <motion.a
-            href={project.github}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 px-6 py-3 glass rounded-2xl text-slate-600 dark:text-slate-400 hover:text-blue-500 dark:hover:text-blue-400 transition-all duration-300 font-semibold cursor-hover"
-            whileHover={{ scale: 1.05, y: -3 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            <Github size={20} />
-            Code
-          </motion.a>
-          <motion.a
-            href={project.demo}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 px-6 py-3 glass rounded-2xl text-slate-600 dark:text-slate-400 hover:text-blue-500 dark:hover:text-blue-400 transition-all duration-300 font-semibold cursor-hover"
-            whileHover={{ scale: 1.05, y: -3 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            <ExternalLink size={20} />
-            Demo
-          </motion.a>
-        </div>
+      {/* Status and Category Badges */}
+      <div className="absolute top-4 left-4 flex gap-2">
+        <span className={`px-3 py-1 rounded-full text-sm font-semibold ${getStatusColor(project.status)}`}>
+          {project.status}
+        </span>
+        <span className={`px-3 py-1 rounded-full text-sm font-semibold ${getCategoryColor(project.category)}`}>
+          {project.category}
+        </span>
       </div>
-    </motion.div>
+
+      {featured && (
+        <div className="absolute top-4 right-4 bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-3 py-1 rounded-full text-sm font-bold flex items-center gap-1">
+          <Star className="w-4 h-4 fill-current" />
+          Featured
+        </div>
+      )}
+    </div>
+    
+    <div className="p-8">
+      <h3 className="text-2xl font-bold text-black dark:text-slate-200 mb-3 cursor-hover project-title">
+        {project.title}
+      </h3>
+      <p className="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed text-lg">
+        {project.description}
+      </p>
+      
+      <div className="flex flex-wrap gap-3 mb-6">
+        {project.tech.map((tech, index) => (
+          <motion.span
+            key={tech}
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ delay: index * 0.05, duration: 0.3 }}
+            viewport={{ once: true }}
+            className="px-4 py-2 glass rounded-2xl text-sm font-semibold text-slate-700 dark:text-slate-300 cursor-hover border border-white/30 dark:border-slate-600/30"
+            whileHover={{ scale: 1.1, y: -2 }}
+          >
+            {tech}
+          </motion.span>
+        ))}
+      </div>
+      
+      <div className="flex gap-4">
+        <motion.a
+          href={project.github}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center gap-2 px-6 py-3 glass rounded-2xl text-slate-600 dark:text-slate-400 hover:text-blue-500 dark:hover:text-blue-400 transition-all duration-300 font-semibold cursor-hover"
+          whileHover={{ scale: 1.05, y: -3 }}
+          whileTap={{ scale: 0.95 }}
+        >
+          <Github size={20} />
+          Code
+        </motion.a>
+        <motion.a
+          href={project.demo}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center gap-2 px-6 py-3 glass rounded-2xl text-slate-600 dark:text-slate-400 hover:text-blue-500 dark:hover:text-blue-400 transition-all duration-300 font-semibold cursor-hover"
+          whileHover={{ scale: 1.05, y: -3 }}
+          whileTap={{ scale: 0.95 }}
+        >
+          <ExternalLink size={20} />
+          Demo
+        </motion.a>
+      </div>
+    </div>
+  </motion.div>
   )
 
   return (

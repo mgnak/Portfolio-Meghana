@@ -1,98 +1,98 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Code, Database, Server, Smartphone, Cloud, Shield, Zap, Star } from 'lucide-react'
+import { Code, Database, Server, Smartphone, Cloud, Shield } from 'lucide-react'
 
 const Skills = () => {
   const skillCategories = [
     {
       title: 'Frontend Development',
       icon: Code,
-      color: 'from-blue-500 to-purple-600',
-      bgColor: 'bg-blue-50 dark:bg-blue-900/20',
+      color: 'text-blue-500 dark:text-blue-400',
+      bgColor: 'bg-blue-100 dark:bg-blue-900/30',
       skills: [
-        { name: 'React', level: 95 },
-        { name: 'Next.js', level: 90 },
-        { name: 'JavaScript', level: 95 },
-        { name: 'TypeScript', level: 85 },
-        { name: 'HTML/CSS', level: 98 },
-        { name: 'Tailwind CSS', level: 92 },
+        { name: 'React', icon: '/images/logos/react.png' },
+        { name: 'Next.js', icon: '/images/logos/nextjs.png' },
+        { name: 'JavaScript', icon: '/images/logos/javascript.png' },
+        // { name: 'TypeScript', icon: '/images/logos/typescript.png' },
+        { name: 'HTML/CSS', icon: '/images/logos/html5.png' },
+        { name: 'Tailwind CSS', icon: '/images/logos/tailwind.png' }
       ]
     },
     {
       title: 'Backend Development',
       icon: Server,
-      color: 'from-green-500 to-teal-600',
-      bgColor: 'bg-green-50 dark:bg-green-900/20',
+      color: 'text-green-500 dark:text-green-400',
+      bgColor: 'bg-green-100 dark:bg-green-900/30',
       skills: [
-        { name: 'Node.js', level: 92 },
-        { name: 'Java', level: 88 },
-        { name: 'Spring Boot', level: 85 },
-        { name: 'Python', level: 80 },
-        { name: 'REST APIs', level: 95 },
-        { name: 'GraphQL', level: 75 },
+        { name: 'Node.js', icon: '/images/logos/nodejs.png' },
+        { name: 'Java', icon: '/images/logos/java.png' },
+        { name: 'Spring Boot', icon: '/images/logos/springboot.png' },
+        { name: 'Python', icon: '/images/logos/python.png' },
+        { name: 'REST APIs', icon: '/images/logos/rest-api.png' },
+        { name: 'MongoDB', icon: '/images/logos/mongodb.png' }
       ]
     },
     {
       title: 'Database & Storage',
       icon: Database,
-      color: 'from-orange-500 to-red-600',
-      bgColor: 'bg-orange-50 dark:bg-orange-900/20',
+      color: 'text-orange-500 dark:text-orange-400',
+      bgColor: 'bg-orange-100 dark:bg-orange-900/30',
       skills: [
-        { name: 'MySQL', level: 90 },
-        { name: 'MongoDB', level: 85 },
-        { name: 'PostgreSQL', level: 80 },
-        { name: 'Redis', level: 75 },
-        { name: 'Firebase', level: 85 },
-        { name: 'Prisma', level: 82 },
+        { name: 'MySQL', icon: '/images/logos/mysql.png' },
+        { name: 'MongoDB', icon: '/images/logos/mongodb.png' },
+        { name: 'PostgreSQL', icon: '/images/logos/postgresql.png' },
+        { name: 'Redis', icon: '/images/logos/redis.png' },
+        { name: 'Firebase', icon: '/images/logos/firebase.png' },
+        // { name: 'Prisma', icon: '/images/logos/prisma.png' }
       ]
     },
     {
       title: 'Mobile Development',
       icon: Smartphone,
-      color: 'from-purple-500 to-pink-600',
-      bgColor: 'bg-purple-50 dark:bg-purple-900/20',
+      color: 'text-purple-500 dark:text-purple-400',
+      bgColor: 'bg-purple-100 dark:bg-purple-900/30',
       skills: [
-        { name: 'React Native', level: 85 },
-        { name: 'Flutter', level: 70 },
-        { name: 'Expo', level: 88 },
-        { name: 'Mobile UI/UX', level: 82 },
-        { name: 'App Store Deploy', level: 80 },
-        { name: 'Push Notifications', level: 75 },
+        // { name: 'React Native', icon: '/images/logos/reactnative.png' },
+        { name: 'Flutter', icon: '/images/logos/flutter.png' },
+        // { name: 'Expo', icon: '/images/logos/expo.png' },
+        { name: 'Android Studio', icon: '/images/logos/android-studio.png' },
+        // { name: 'App Store Deploy', icon: null },
+        { name: 'Push Notifications', icon: '/images/logos/pushnotification.png' }
       ]
     },
     {
       title: 'DevOps & Cloud',
       icon: Cloud,
-      color: 'from-cyan-500 to-blue-600',
-      bgColor: 'bg-cyan-50 dark:bg-cyan-900/20',
+      color: 'text-cyan-500 dark:text-cyan-400',
+      bgColor: 'bg-cyan-100 dark:bg-cyan-900/30',
       skills: [
-        { name: 'Docker', level: 85 },
-        { name: 'AWS', level: 82 },
-        { name: 'Kubernetes', level: 70 },
-        { name: 'CI/CD', level: 88 },
-        { name: 'Nginx', level: 80 },
-        { name: 'Linux', level: 85 },
+        { name: 'Docker', icon: '/images/logos/docker.png' },
+        { name: 'AWS', icon: '/images/logos/aws.png' },
+        { name: 'Kubernetes', icon: '/images/logos/kubernetes.png' },
+        // { name: 'CI/CD', icon: null },
+        // { name: 'Nginx', icon: '/images/logos/nginx.png' },
+        // { name: 'Linux', icon: null }
       ]
     },
     {
       title: 'Tools & Others',
       icon: Shield,
-      color: 'from-indigo-500 to-purple-600',
-      bgColor: 'bg-indigo-50 dark:bg-indigo-900/20',
+      color: 'text-indigo-500 dark:text-indigo-400',
+      bgColor: 'bg-indigo-100 dark:bg-indigo-900/30',
       skills: [
-        { name: 'Git', level: 95 },
-        { name: 'VS Code', level: 98 },
-        { name: 'Figma', level: 80 },
-        { name: 'Postman', level: 90 },
-        { name: 'Jest', level: 85 },
-        { name: 'Webpack', level: 75 },
+        { name: 'Git', icon: '/images/logos/github.png' },
+        { name: 'VS Code', icon: '/images/logos/vscode.png' },
+        { name: 'Figma', icon: '/images/logos/figma.png' },
+        { name: 'Postman', icon: '/images/logos/postman.png' },
+        // { name: 'Jest', icon: '/images/logos/jest.png' },
+        // { name: 'Webpack', icon: '/images/logos/webpack.png' }
       ]
-    },
+    }
   ]
 
   return (
-    <section id="skills" className="py-24 bg-white dark:bg-slate-800">
+    <section id="skills" className="py-24 section-bg-light dark:section-bg-dark">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -108,67 +108,50 @@ const Skills = () => {
             Skills & Expertise
           </motion.h2>
           <p className="text-2xl text-slate-600 dark:text-slate-400 max-w-4xl mx-auto leading-relaxed">
-            A comprehensive overview of my technical skills and proficiency levels
+            A comprehensive overview of my technical skills
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
-          {skillCategories.map((category, categoryIndex) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {skillCategories.map((category, index) => (
             <motion.div
               key={category.title}
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="space-y-8"
-              // whileHover={{ scale: 1.02, y: -10 }}
+              className={`p-6 rounded-3xl glass shadow-xl card-hover cursor-hover transition-all duration-300`}
+              whileHover={{ scale: 1.02, y: -5 }}
             >
-              <div className="space-y-4">
-                <div className={`p-4 rounded-2xl bg-gradient-to-r ${category.color} mr-4 shadow-lg`}>
-                  <category.icon className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-2xl font-bold text-slate-800 dark:text-slate-200">
+              <div className="flex items-center gap-3 mb-4">
+                <category.icon className={`w-6 h-6 ${category.color}`} />
+                <h3 className="text-2xl font-semibold text-slate-800 dark:text-slate-200">
                   {category.title}
                 </h3>
               </div>
-
-              <div className="space-y-6">
+              <div className="grid grid-cols-2 gap-4">
                 {category.skills.map((skill, skillIndex) => (
                   <motion.div
                     key={skill.name}
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ delay: (categoryIndex * 0.1) + (skillIndex * 0.05), duration: 0.5 }}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ delay: skillIndex * 0.05, duration: 0.4 }}
                     viewport={{ once: true }}
-                    className="skill-item"
+                    className={`flex items-center gap-2 p-3 rounded-2xl ${category.bgColor} hover:shadow-lg transition-all duration-300 group cursor-hover`}
+                    whileHover={{ scale: 1.1, y: -5 }}
                   >
-                    <div className="flex justify-between items-center mb-3">
-                      <span className="text-lg font-semibold text-slate-700 dark:text-slate-300">
-                        {skill.name}
-                      </span>
-                      <div className="flex items-center gap-2">
-                        <span className="text-sm font-bold text-slate-500 dark:text-slate-400">
-                          {skill.level}%
-                        </span>
-                        {skill.level >= 90 && <Star className="w-4 h-4 text-yellow-500 fill-current" />}
-                      </div>
-                    </div>
-                    <div className="w-full bg-slate-200 dark:bg-slate-700 rounded-full h-3 overflow-hidden shadow-inner">
-                      <motion.div
-                        initial={{ width: 0 }}
-                        whileInView={{ width: `${skill.level}%` }}
-                        transition={{ delay: (categoryIndex * 0.1) + (skillIndex * 0.05) + 0.3, duration: 1.2, ease: "easeOut" }}
-                        viewport={{ once: true }}
-                        className={`h-full bg-gradient-to-r ${category.color} rounded-full relative overflow-hidden`}
-                      >
-                        <div className="absolute inset-0 bg-white/30 animate-pulse"></div>
-                        <motion.div
-                          className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent"
-                          animate={{ x: [-100, 200] }}
-                          transition={{ duration: 2, repeat: Infinity, delay: skillIndex * 0.2 }}
-                        />
-                      </motion.div>
-                    </div>
+                    {skill.icon ? (
+                      <img
+                        src={skill.icon}
+                        alt={`${skill.name} logo`}
+                        className={`w-6 h-6 object-contain ${category.color} group-hover:scale-125 transition-transform duration-300`}
+                      />
+                    ) : (
+                      <span className={`w-6 h-6 rounded-full ${category.bgColor} group-hover:scale-125 transition-transform duration-300`} />
+                    )}
+                    <span className={`text-base font-medium ${category.color}`}>
+                      {skill.name}
+                    </span>
                   </motion.div>
                 ))}
               </div>
@@ -176,54 +159,29 @@ const Skills = () => {
           ))}
         </div>
 
-        {/* Enhanced Skills Summary */}
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.6, duration: 0.8 }}
+          transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-center"
+          className="text-center mt-20"
         >
-          <div className="relative">
-            <motion.div 
-              className="glass p-12 rounded-3xl shadow-2xl cursor-hover overflow-hidden"
-              whileHover={{ scale: 1.02, y: -5 }}
+          <motion.div 
+            className="inline-block glass p-8 rounded-3xl shadow-2xl cursor-hover"
+            whileHover={{ scale: 1.02, y: -5 }}
+          >
+            <p className="text-xl text-slate-600 dark:text-slate-400 mb-6 max-w-2xl">
+              Want to leverage these skills for your project? Let's collaborate!
+            </p>
+            <motion.button
+              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+              className="btn-primary px-8 py-4 text-lg font-semibold rounded-2xl cursor-hover"
+              whileHover={{ scale: 1.05, y: -3 }}
+              whileTap={{ scale: 0.95 }}
             >
-              {/* Background decoration */}
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-cyan-500/10 animate-gradient-flow"></div>
-              
-              <div className="relative z-10">
-                <div className="flex items-center justify-center gap-3 mb-6">
-                  <Zap className="w-8 h-8 text-yellow-500" />
-                  <h3 className="text-3xl font-bold gradient-text">
-                    Always Learning, Always Growing
-                  </h3>
-                  <Zap className="w-8 h-8 text-yellow-500" />
-                </div>
-                
-                <p className="text-xl text-slate-600 dark:text-slate-400 mb-8 max-w-3xl mx-auto leading-relaxed">
-                  Technology evolves rapidly, and so do I. I'm constantly exploring new frameworks, 
-                  tools, and best practices to stay at the forefront of web development.
-                </p>
-                
-                <div className="flex flex-wrap justify-center gap-4">
-                  {['Problem Solving', 'Team Collaboration', 'Agile Methodology', 'Code Review', 'Mentoring', 'Innovation'].map((skill, index) => (
-                    <motion.span
-                      key={skill}
-                      initial={{ opacity: 0, scale: 0.8 }}
-                      whileInView={{ opacity: 1, scale: 1 }}
-                      transition={{ delay: index * 0.1, duration: 0.5 }}
-                      viewport={{ once: true }}
-                      className="px-6 py-3 glass rounded-2xl text-slate-700 dark:text-slate-300 text-lg font-semibold cursor-hover border border-white/30 dark:border-slate-600/30"
-                      whileHover={{ scale: 1.1, y: -3 }}
-                    >
-                      {skill}
-                    </motion.span>
-                  ))}
-                </div>
-              </div>
-            </motion.div>
-          </div>
+              Get in Touch
+            </motion.button>
+          </motion.div>
         </motion.div>
       </div>
     </section>

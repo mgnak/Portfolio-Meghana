@@ -8,19 +8,19 @@ import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
 
 const NavBar = () => {
-  const [isOpen, setIsOpen] = useState(false)
-  const [scrolled, setScrolled] = useState(false)
-  const { theme, setTheme } = useTheme()
-  const [mounted, setMounted] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    setMounted(true)
+    setMounted(true);
     const handleScroll = () => {
-      setScrolled(window.scrollY > 50)
-    }
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+      setScrolled(window.scrollY > 50);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const navItems = [
     { name: 'Home', href: '#home' },
@@ -29,17 +29,17 @@ const NavBar = () => {
     { name: 'Projects', href: '#projects' },
     { name: 'Certificates', href: '#certificates' },
     { name: 'Contact', href: '#contact' },
-  ]
+  ];
 
   const scrollToSection = (href) => {
-    const element = document.querySelector(href)
+    const element = document.querySelector(href);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' })
+      element.scrollIntoView({ behavior: 'smooth' });
     }
-    setIsOpen(false)
-  }
+    setIsOpen(false);
+  };
 
-  if (!mounted) return null
+  if (!mounted) return null;
 
   return (
     <motion.nav
@@ -56,7 +56,7 @@ const NavBar = () => {
             animate={{ opacity: 1 }}
             className="flex-shrink-0"
           >
-            <h3 className="text-2xl font-bold gradient-text">Meghana K</h3>
+            <h4 className="text-2xl font-bold space-x-3.5">Meghana K</h4>
           </motion.div>
 
           {/* Desktop Navigation */}
@@ -65,7 +65,7 @@ const NavBar = () => {
               <motion.button
                 key={item.name}
                 onClick={() => scrollToSection(item.href)}
-                className="text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200 font-medium"
+                className={`text-${theme === 'light' ? 'gray-900' : 'gray-400'} hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200 font-medium`}
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -120,7 +120,7 @@ const NavBar = () => {
             <motion.button
               key={item.name}
               onClick={() => scrollToSection(item.href)}
-              className="block w-full text-left px-3 py-2 text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200 font-medium"
+              className={`block w-full text-left px-3 py-2 text-${theme === 'light' ? 'gray-900' : 'gray-400'} hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200 font-medium`}
               whileHover={{ x: 10 }}
             >
               {item.name}
@@ -129,7 +129,7 @@ const NavBar = () => {
         </div>
       </motion.div>
     </motion.nav>
-  )
-}
+  );
+};
 
 export default NavBar;
