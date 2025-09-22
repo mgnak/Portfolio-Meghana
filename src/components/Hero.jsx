@@ -14,7 +14,7 @@ const Hero = () => {
   const downloadResume = () => {
     // Create a sample resume download link
     const link = document.createElement('a')
-    link.href = '/resume.pdf' // You would replace this with actual resume file
+    link.href = '/Resume_Meghana_K.pdf' // You would replace this with actual resume file
     link.download = 'Meghana_K_Resume.pdf'
     link.click()
   }
@@ -107,9 +107,9 @@ const Hero = () => {
             className="flex justify-center space-x-6 pt-8"
           >
             {[
-              { icon: Github, href: 'https://github.com/alexjohnson', label: 'GitHub' },
-              { icon: Linkedin, href: 'https://linkedin.com/in/alexjohnson', label: 'LinkedIn' },
-              { icon: Mail, href: 'mailto:alex@example.com', label: 'Email' },
+              { icon: Github, href: 'https://github.com/mgnak', label: 'GitHub' },
+              { icon: Linkedin, href: 'https://www.linkedin.com/in/meghana-kudingila', label: 'LinkedIn' },
+              { icon: Mail, href: 'mailto:meghanamgnak@gmail.com', label: 'Email' },
             ].map(({ icon: Icon, href, label }) => (
               <motion.a
                 key={label}
@@ -127,7 +127,7 @@ const Hero = () => {
           </motion.div>
 
           {/* Scroll Indicator */}
-          <motion.div
+          {/* <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1, duration: 0.6 }}
@@ -144,7 +144,7 @@ const Hero = () => {
                 className="w-1 h-3 bg-slate-400 dark:bg-slate-500 rounded-full mt-2"
               />
             </motion.div>
-          </motion.div>
+          </motion.div> */}
         </motion.div>
       </div>
     </section>

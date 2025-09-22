@@ -17,15 +17,17 @@
 }
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #171717; /* Changed from --text to --foreground */
+  --text: #171717; /* Add explicit text variable */
 }
 @media (min-width: 768px) {
-
+strong {
+  color: #27313a !important;  /* Force exact black for strong elements in light mode */
+}
    .mobile-padding {
     padding-left: 20px;
     padding-right: 20px;
   }
-
 
   body {
     background: var(--background);
@@ -67,15 +69,38 @@
     /* Allow clicks to pass through the canvas */
   }
 
-  :root {
-    --background: #ffffff;
-    --text: #000000;
+ :root,
+  [data-theme="light"] {
+    --text-primary: #302f2f;  
+    --text-secondary: #6b7280;  
   }
 
   [data-theme="dark"] {
     --background: #1a1a1a;
     --text: #ffffff;
+
+    --text-primary: #f1f5f9;
+    --text-secondary: #94a3b8;
   }
+
+
+  /*  */
+  .text-primary {
+  color: var(--text-primary, #171717);
+}
+
+.text-secondary {
+  color: var(--text-secondary, #64748b);
+}
+.light-text-fix {
+  color: #302f2f !important;
+}
+/*  */
+
+.dark-text-fix {
+  color: #f1f5f9 !important;
+}
+
 
   /* Show cursor on form elements for better UX */
   input,
@@ -129,7 +154,7 @@
 
 .dark body {
   background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-  color: #f1f5f9;
+  color: var(--text-primary, #0f1419);
 }
 
 /* Enhanced Glassmorphism effect */
@@ -284,6 +309,31 @@
   box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
 }
 
+strong { 
+  color: #27313a !important; 
+  display: inline-block; /* Prevent inheritance issues */
+}
+.dark strong { 
+  color: #f8fafc !important; /* Brighter white */
+  display: inline-block;
+}
+
+/* Force strong text to override inheritance */
+.dark p strong {
+  color: #f8fafc !important;
+  -webkit-text-fill-color: #f8fafc !important;
+  text-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
+}
+
+/* Ensure paragraph text doesn't override strong */
+p strong {
+  color: inherit !important;
+  display: inline-block;
+}
+
+
+
+
 /* Enhanced Tech stack icons */
 .tech-icon {
   width: 56px;
@@ -340,13 +390,15 @@
 .form-input {
   width: 100%;
   padding: 16px 20px;
-  border: 2px solid #e2e8f0;
+  border: 2px solid #e2e8f0; /* Light mode border */
   border-radius: 12px;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.95); /* Light mode: White background */
+  color: #302f2f; /* Dark text for light mode */
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   font-size: 16px;
   font-weight: 500;
   backdrop-filter: blur(10px);
+  box-sizing: border-box;
 }
 
 .form-input:focus {
@@ -357,16 +409,18 @@
   transform: translateY(-2px);
 }
 
+/* ✅ DARK MODE: GREY BACKGROUND */
 .dark .form-input {
-  background: rgba(15, 23, 42, 0.9);
-  border-color: #475569;
-  color: #f1f5f9;
+  background: #1e293b !important; /* Dark grey background */
+  border-color: #334155 !important; /* Darker grey border */
+  color: #f1f5f9 !important; /* Light text */
 }
 
 .dark .form-input:focus {
-  border-color: #60a5fa;
-  box-shadow: 0 0 0 4px rgba(96, 165, 250, 0.1);
-  background: rgba(15, 23, 42, 1);
+  background: #1f2937 !important; /* Slightly lighter grey on focus */
+  border-color: #60a5fa !important; /* Blue focus border */
+  box-shadow: 0 0 0 4px rgba(96, 165, 250, 0.2);
+  color: #f1f5f9 !important;
 }
 
 /* Enhanced Loading spinner */
@@ -478,15 +532,6 @@
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Enhanced section backgrounds */
-/* .section-bg-light {
-  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 50%, #f1f5f9 100%);
-}
-
-.section-bg-dark {
-  background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
-} */
-
 /* Code font for technical elements */
 .font-mono {
   font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
@@ -534,7 +579,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 /* Override any existing theme-specific colors if needed */
 [data-theme="light"] h1, [data-theme="light"] h2, [data-theme="light"] h3, [data-theme="light"] h4, [data-theme="light"] h5, [data-theme="light"] h6 {
-  color: #242121 !important; /* Force black in light mode */
+  color: #302f2f !important; /* Force black in light mode */
 }
 
 [data-theme="dark"] h1, [data-theme="dark"] h2, [data-theme="dark"] h3, [data-theme="dark"] h4, [data-theme="dark"] h5, [data-theme="dark"] h6 {

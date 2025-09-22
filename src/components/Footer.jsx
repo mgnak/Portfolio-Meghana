@@ -43,8 +43,8 @@ const Footer = () => {
 
   const downloadResume = () => {
     const link = document.createElement('a')
-    link.href = '/resume.pdf'
-    link.download = 'Alex_Johnson_Resume.pdf'
+    link.href = '/Resume_Meghana_K.pdf'
+    link.download = 'Meghana_Resume.pdf'
     link.click()
   }
 

@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { Mail, Phone, MapPin, Send, Github, Linkedin, Twitter, MessageCircle, User, AtSign } from 'lucide-react'
+import { Mail, Phone, MapPin, Send, Github, Linkedin, Twitter, MessageCircle, User, AtSign, Instagram } from 'lucide-react'
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -39,7 +39,7 @@ const Contact = () => {
     {
       icon: Mail,
       title: 'Email',
-      value: 'alex@example.com',
+      value: 'meghanamgnak@gmail.com',
       href: 'mailto:alex@example.com',
       color: 'text-blue-500',
       bg: 'bg-blue-100 dark:bg-blue-900/30'
@@ -47,7 +47,7 @@ const Contact = () => {
     {
       icon: Phone,
       title: 'Phone',
-      value: '+1 (555) 123-4567',
+      value: '+91 94827 51482',
       href: 'tel:+15551234567',
       color: 'text-green-500',
       bg: 'bg-green-100 dark:bg-green-900/30'
@@ -55,7 +55,7 @@ const Contact = () => {
     {
       icon: MapPin,
       title: 'Location',
-      value: 'San Francisco, CA',
+      value: 'Karkala, Karnataka',
       href: 'https://maps.google.com',
       color: 'text-purple-500',
       bg: 'bg-purple-100 dark:bg-purple-900/30'
@@ -66,21 +66,21 @@ const Contact = () => {
     {
       icon: Github,
       name: 'GitHub',
-      href: 'https://github.com/alexjohnson',
+      href: 'https://github.com/mgnak',
       color: 'hover:text-gray-600 dark:hover:text-gray-300',
       bg: 'hover:bg-gray-100 dark:hover:bg-gray-800'
     },
     {
       icon: Linkedin,
       name: 'LinkedIn',
-      href: 'https://linkedin.com/in/alexjohnson',
+      href: 'https://linkedin.com/in/meghana-kudingila',
       color: 'hover:text-blue-600',
       bg: 'hover:bg-blue-100 dark:hover:bg-blue-900/30'
     },
     {
-      icon: Twitter,
-      name: 'Twitter',
-      href: 'https://twitter.com/alexjohnson',
+      icon: Instagram,
+      name: 'Instagram',
+      href: 'https://instagram.com',
       color: 'hover:text-blue-400',
       bg: 'hover:bg-blue-100 dark:hover:bg-blue-900/30'
     }

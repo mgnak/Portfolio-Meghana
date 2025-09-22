@@ -114,20 +114,22 @@ const Certificates = () => {
       onClick={() => setSelectedCertificate(certificate)}
       whileHover={{ scale: 1.02, y: -5 }}
     >
-      <div className="relative group">
+      <div className="relative group overflow-hidden"> {/* Fixed: Changed from overflow-visible to overflow-hidden */}
         <img
           src={certificate.image}
           alt={certificate.title}
-          className="w-full h-40 object-cover transition-transform duration-300 group-hover:scale-105"
+          className="w-full h-40 object-cover transition-transform duration-300 group-hover:scale-105 block" /* Added block for baseline stacking */
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+        {/* Fixed: Added z-10 for overlay priority */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center z-10"> {/* Added z-10 */}
           <div className="text-white text-center">
             <Award className="w-8 h-8 mx-auto mb-2" />
             <p className="font-semibold">View Details</p>
           </div>
         </div>
         
-        <div className="absolute top-3 right-3 flex flex-col gap-2">
+        {/* Fixed: Added z-20 for badges to stay above overlay */}
+        <div className="absolute top-3 right-3 flex flex-col gap-2 z-20"> {/* Added z-20 */}
           <div className="bg-white/90 dark:bg-slate-800/90 backdrop-blur-sm text-slate-800 dark:text-slate-200 px-2 py-1 rounded-full text-xs font-bold">
             {certificate.date}
           </div>
@@ -137,7 +139,7 @@ const Certificates = () => {
         </div>
 
         {featured && (
-          <div className="absolute top-3 left-3 bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-2 py-1 rounded-full text-xs font-bold flex items-center gap-1">
+          <div className="absolute top-3 left-3 bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-2 py-1 rounded-full text-xs font-bold flex items-center gap-1 z-20"> {/* Added z-20 */}
             <Star className="w-3 h-3 fill-current" />
             Featured
           </div>

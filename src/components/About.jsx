@@ -20,9 +20,9 @@ const About = () => {
   ]
 
   const stats = [
-    { icon: Code, value: '50+', label: 'Projects Completed', color: 'text-blue-500', bg: 'bg-blue-100 dark:bg-blue-900/30' },
-    { icon: Award, value: '15+', label: 'Certifications', color: 'text-purple-500', bg: 'bg-purple-100 dark:bg-purple-900/30' },
-    { icon: BookOpen, value: '3+', label: 'Years Experience', color: 'text-green-500', bg: 'bg-green-100 dark:bg-green-900/30' },
+    { icon: Code, value: '10+', label: 'Projects Completed', color: 'text-blue-500', bg: 'bg-blue-100 dark:bg-blue-900/30' },
+    { icon: Award, value: '10+', label: 'Certifications', color: 'text-purple-500', bg: 'bg-purple-100 dark:bg-purple-900/30' },
+    { icon: BookOpen, value: '0', label: 'Years Experience', color: 'text-green-500', bg: 'bg-green-100 dark:bg-green-900/30' },
     { icon: Server, value: '20+', label: 'Technologies', color: 'text-orange-500', bg: 'bg-orange-100 dark:bg-orange-900/30' },
   ]
 
@@ -42,7 +42,7 @@ const About = () => {
           viewport={{ once: true }}
           className="text-center mb-20"
         >
-          <motion.h2 
+          <motion.h2
             className="text-5xl md:text-6xl font-bold gradient-text mb-8"
             whileHover={{ scale: 1.02 }}
           >
@@ -63,25 +63,25 @@ const About = () => {
             className="space-y-8"
           >
             <div className="space-y-6">
-              <motion.h3 
+              <motion.h3
                 className="text-3xl font-semibold text-slate-800 dark:text-slate-200"
                 whileHover={{ scale: 1.02 }}
               >
                 Hello! I'm Meghana K
               </motion.h3>
               <p className="text-xl text-slate-600 dark:text-slate-400 leading-relaxed">
-                I'm a passionate Full Stack Developer with over 3 years of experience building 
-                modern web applications. My journey started with a Computer Science degree from 
-                Tech University, and I've been constantly learning and growing ever since.
+                I am a recent graduage MCA student at NMAM Institute of Technology with a strong passion for full-stack development,
+                 UI/UX design, and problem-solving through technology. My academic journey has helped me build a solid foundation in 
+                 computer science, programming, and database design.
               </p>
               <p className="text-xl text-slate-600 dark:text-slate-400 leading-relaxed">
-                I specialize in creating scalable, user-friendly applications using cutting-edge 
-                technologies. Whether it's a responsive frontend with React or a robust backend 
-                with Node.js and Java, I love turning complex problems into simple, elegant solutions.
+                I have completed multiple internships where I worked on real-world projects involving Spring Boot, Next.js, Redis, and Docker,
+                 gaining valuable hands-on experience in software engineering and microservices. My projects range from an Expense Tracker Web 
+                 Application to innovative AI-driven tools, showcasing my ability to create scalable and user-friendly solutions.
               </p>
               <p className="text-xl text-slate-600 dark:text-slate-400 leading-relaxed">
-                When I'm not coding, you'll find me exploring new technologies, contributing to 
-                open-source projects, or sharing knowledge with the dev community.
+                 I hold certifications in React, networking, and software development, 
+                 further strengthening my technical expertise.
               </p>
             </div>
 
@@ -106,7 +106,7 @@ const About = () => {
             </div>
 
             {/* Education */}
-            <motion.div 
+            <motion.div
               className="glass p-8 rounded-3xl shadow-xl cursor-hover"
               whileHover={{ scale: 1.02, y: -5 }}
               initial={{ opacity: 0, y: 20 }}
@@ -119,11 +119,20 @@ const About = () => {
                 Education
               </h4>
               <div className="space-y-3">
-                <p className="text-lg text-slate-600 dark:text-slate-400">
-                  <strong className="text-slate-800 dark:text-slate-200">Bachelor of Science in Computer Science</strong>
+                <p className="text-lg">
+                  <strong className="text-slate-800 dark:text-slate-50">Master's in Computer Application</strong>
                 </p>
-                <p className="text-slate-500 dark:text-slate-500 font-medium">
-                  Tech University • 2020 - 2024
+                <p className="text-slate-500 dark:text-slate-400 font-medium">
+                  Nitte University • 2023 - 2025
+                </p>
+              </div>
+              <br />
+              <div className="space-y-3">
+                <p className="text-lg">
+                  <strong className="text-slate-800 dark:text-slate-50">Bachelor in Computer Application</strong>
+                </p>
+                <p className="text-slate-500 dark:text-slate-400 font-medium">
+                  Mangalore University • 2020 - 2023
                 </p>
               </div>
             </motion.div>
@@ -163,7 +172,7 @@ const About = () => {
             </div>
 
             {/* Tech Stack */}
-            <motion.div 
+            <motion.div
               className="glass p-8 rounded-3xl shadow-xl"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -206,7 +215,7 @@ const About = () => {
           viewport={{ once: true }}
           className="text-center"
         >
-          <motion.div 
+          <motion.div
             className="inline-block glass p-8 rounded-3xl shadow-2xl cursor-hover"
             whileHover={{ scale: 1.02, y: -5 }}
           >

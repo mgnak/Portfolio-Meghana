@@ -50,22 +50,38 @@ const NavBar = () => {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            className="flex-shrink-0"
-          >
-            <h4 className="text-2xl font-bold space-x-3.5">Meghana K</h4>
-          </motion.div>
+        <div className="flex items-center justify-between h-16">
+          {/* Left Side: Logo/Brand (Photo + Name) - LEFT ALIGNED */}
+          <div className="flex items-center space-x-3">
+            {/* Profile Photo */}
+            <div className="flex-shrink-0">
+              <img
+                src="/DP.png"
+                alt="Meghana K"
+                className="w-10 h-10 rounded-full object-cover border border-gray-200 dark:border-gray-700"
+              />
+            </div>
+            
+            {/* Name */}
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.1 }}
+              className="flex-shrink-0"
+            >
+              <h4 className="text-xl font-bold text-slate-900 dark:text-slate-100">
+                Meghana K
+              </h4>
+            </motion.div>
+          </div>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          {/* Right Side: Desktop Navigation - PUSHED TO RIGHT */}
+          <div className="hidden md:flex items-center space-x-8 ml-auto">
             {navItems.map((item) => (
               <motion.button
                 key={item.name}
                 onClick={() => scrollToSection(item.href)}
-                className={`text-${theme === 'light' ? 'gray-900' : 'gray-400'} hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200 font-medium`}
+                className={`text-${theme === 'light' ? 'gray-900' : 'gray-100'} hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200 font-medium`}
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -83,8 +99,8 @@ const NavBar = () => {
             </motion.button>
           </div>
 
-          {/* Mobile Navigation Button */}
-          <div className="md:hidden flex items-center space-x-4">
+          {/* Right Side: Mobile Navigation Button - PUSHED TO RIGHT */}
+          <div className="md:hidden flex items-center space-x-2 ml-auto">
             <motion.button
               onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
               className="p-2 rounded-lg bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300"
