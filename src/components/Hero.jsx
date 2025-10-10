@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 import { Download, ArrowDown, Github, Linkedin, Mail } from 'lucide-react'
 import { Canvas } from '@react-three/fiber'
 import { Suspense } from 'react'
+import { TypeAnimation } from 'react-type-animation'
 import FloatingShapes from './3D/FloatingShapes'
 
 const Hero = () => {
@@ -12,16 +13,14 @@ const Hero = () => {
   }
 
   const downloadResume = () => {
-    // Create a sample resume download link
     const link = document.createElement('a')
-    link.href = '/Resume_Meghana_K.pdf' // You would replace this with actual resume file
+    link.href = '/Resume_Meghana_K.pdf'
     link.download = 'Meghana_K_Resume.pdf'
     link.click()
   }
 
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* 3D Background */}
       <div className="absolute inset-0 z-0">
         <Canvas camera={{ position: [0, 0, 5] }}>
           <Suspense fallback={null}>
@@ -30,10 +29,8 @@ const Hero = () => {
         </Canvas>
       </div>
 
-      {/* Gradient Background */}
       <div className="absolute inset-0 mesh-gradient opacity-30"></div>
 
-      {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -41,7 +38,6 @@ const Hero = () => {
           transition={{ duration: 0.8 }}
           className="space-y-8"
         >
-          {/* Greeting */}
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -55,11 +51,24 @@ const Hero = () => {
               Meghana K
             </h1>
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-slate-700 dark:text-slate-300 cursor-hover">
-              Full Stack Developer
+              <TypeAnimation
+                sequence={[
+                  'Fresh IT graduate',
+                  2000,
+                  'Full Stack Developer',
+                  2000,
+                  'Backend Developer',
+                  2000,
+                  'UI/UX Designer',
+                  2000                  
+                ]}
+                wrapper="span"
+                speed={50}
+                repeat={Infinity}
+              />
             </h2>
           </motion.div>
 
-          {/* Description */}
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -67,11 +76,11 @@ const Hero = () => {
             className="text-lg md:text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto leading-relaxed"
           >
             Passionate about creating innovative web solutions with modern technologies. 
-            I specialize in React, Next.js, Java, and Spring Boot to build scalable, 
+            I specialize in React, Java, and Spring Boot to build scalable, 
             user-friendly applications that make a difference.
+            Interested in UI?UX design tools.
           </motion.p>
 
-          {/* Call to Action Buttons */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -99,7 +108,6 @@ const Hero = () => {
             </motion.button>
           </motion.div>
 
-          {/* Social Links */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -125,26 +133,6 @@ const Hero = () => {
               </motion.a>
             ))}
           </motion.div>
-
-          {/* Scroll Indicator */}
-          {/* <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 1, duration: 0.6 }}
-            className="absolute bottom-8 left-1/2 transform -translate-x-1/2 cursor-hover"
-          >
-            <motion.div
-              animate={{ y: [0, 10, 0] }}
-              transition={{ duration: 2, repeat: Infinity }}
-              className="w-6 h-10 border-2 border-slate-400 dark:border-slate-500 rounded-full flex justify-center"
-            >
-              <motion.div
-                animate={{ y: [0, 16, 0] }}
-                transition={{ duration: 2, repeat: Infinity }}
-                className="w-1 h-3 bg-slate-400 dark:bg-slate-500 rounded-full mt-2"
-              />
-            </motion.div>
-          </motion.div> */}
         </motion.div>
       </div>
     </section>

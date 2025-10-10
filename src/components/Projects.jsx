@@ -10,83 +10,83 @@ const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: 'E-Commerce Platform',
-      description: 'A full-stack e-commerce solution with React, Node.js, and MongoDB. Features include user authentication, payment processing, and admin dashboard.',
-      longDescription: 'This comprehensive e-commerce platform was built to handle high-traffic online stores. It includes features like real-time inventory management, secure payment processing with Stripe, email notifications, and a sophisticated admin panel for managing products, orders, and customers.',
-      tech: ['React', 'Node.js', 'MongoDB', 'Express', 'Stripe', 'JWT'],
-      image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-      github: 'https://github.com/alexjohnson/ecommerce-platform',
-      demo: 'https://ecommerce-demo.vercel.app',
+      title: 'Speech Emotion Recognition',
+      description: 'A machine learning-based solution for recognizing emotions in speech using CNN and RNN models, developed on Kaggle and Google Colab.',
+      longDescription: 'This project leverages advanced machine learning techniques to detect emotions in speech audio. It uses Convolutional Neural Networks (CNN) and Recurrent Neural Networks (RNN) to analyze audio features, providing accurate emotion classification. Developed using Kaggle and Google Colab for data processing and model training.',
+      tech: ['Machine Learning', 'CNN', 'RNN', 'Kaggle', 'Google Colab'],
+      image: 'https://media.istockphoto.com/id/1923678021/photo/voice-recording-man-touching-microphone-icon-on-smart-phone-mobile-application-record-sound.jpg?s=2048x2048&w=is&k=20&c=8XM9IitZIYGhi_kXzw-POdcwGJM_XJ2mtdjJCvsH5WA=',
+      github: 'https://github.com/yourusername/speech-emotion-recognition',
+      demo: 'https://speech-emotion-demo.vercel.app',
       featured: true,
       status: 'Live',
-      category: 'Full Stack'
+      category: 'Machine Learning'
     },
     {
       id: 2,
+      title: 'Vitamin Deficiency Detection',
+      description: 'A machine learning application for detecting vitamin deficiencies using CNN and RNN, built on Google Colab.',
+      longDescription: 'This project uses machine learning to identify vitamin deficiencies based on input data, employing CNN and RNN models for accurate predictions. Developed on Google Colab, it includes data preprocessing, model training, and evaluation for healthcare applications.',
+      tech: ['Machine Learning', 'CNN', 'RNN', 'Google Colab'],
+      image: 'https://images.unsplash.com/photo-1532634922-8fe0b757fb13?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      github: 'https://github.com/yourusername/vitamin-deficiency-detection',
+      demo: 'https://vitamin-deficiency-demo.vercel.app',
+      featured: true,
+      status: 'Live',
+      category: 'Machine Learning'
+    },
+    {
+      id: 3,
       title: 'Task Management App',
       description: 'A collaborative task management application with real-time updates, built using React, Spring Boot, and WebSocket technology.',
       longDescription: 'Designed for teams to collaborate effectively, this task management app features real-time updates, drag-and-drop functionality, file attachments, and comprehensive project analytics. Built with modern technologies to ensure scalability and performance.',
       tech: ['React', 'Spring Boot', 'PostgreSQL', 'WebSocket', 'Material-UI'],
       image: 'https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-      github: 'https://github.com/alexjohnson/task-manager',
+      github: 'https://github.com/yourusername/task-manager',
       demo: 'https://taskmanager-demo.vercel.app',
       featured: true,
       status: 'Live',
       category: 'Full Stack'
     },
     {
-      id: 3,
-      title: 'Weather Dashboard',
-      description: 'A responsive weather dashboard with location-based forecasts, interactive maps, and historical data visualization.',
-      longDescription: 'This weather dashboard provides comprehensive weather information with beautiful visualizations. It includes current conditions, 7-day forecasts, interactive maps, weather alerts, and historical data trends. Built with modern React and integrated with multiple weather APIs.',
-      tech: ['React', 'Next.js', 'Chart.js', 'OpenWeather API', 'Mapbox'],
-      image: 'https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-      github: 'https://github.com/alexjohnson/weather-dashboard',
-      demo: 'https://weather-dashboard-demo.vercel.app',
+      id: 4,
+      title: 'Expense Tracker',
+      description: 'A full-stack expense tracking application built with Java, Spring Boot, React.js, and MySQL for personal finance management.',
+      longDescription: 'This expense tracker allows users to manage their finances by tracking income and expenses, categorizing transactions, and generating reports. Built with Java, Spring Boot, React.js, and MySQL, it ensures robust performance and a user-friendly interface.',
+      tech: ['Java', 'Spring Boot', 'React.js', 'MySQL'],
+      image: 'https://images.unsplash.com/photo-1707157281599-d155d1da5b4c?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      github: 'https://github.com/yourusername/expense-tracker',
+      demo: 'https://expense-tracker-demo.vercel.app',
       featured: false,
       status: 'Live',
-      category: 'Frontend'
-    },
-    {
-      id: 4,
-      title: 'Social Media Analytics',
-      description: 'A comprehensive analytics platform for social media performance tracking with custom dashboards and automated reporting.',
-      longDescription: 'Built for social media managers and businesses, this analytics platform aggregates data from multiple social platforms, provides detailed insights, custom reporting, and automated email reports. Features include competitor analysis and trend prediction.',
-      tech: ['Vue.js', 'Python', 'FastAPI', 'PostgreSQL', 'Docker', 'Redis'],
-      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-      github: 'https://github.com/alexjohnson/social-analytics',
-      demo: 'https://social-analytics-demo.vercel.app',
-      featured: true,
-      status: 'In Development',
       category: 'Full Stack'
     },
     {
       id: 5,
-      title: 'Recipe Sharing Platform',
-      description: 'A community-driven recipe sharing platform with user profiles, ratings, and ingredient-based search functionality.',
-      longDescription: 'This recipe platform allows users to share, discover, and save recipes. Features include advanced search filters, nutritional information, meal planning, shopping lists, and a social aspect where users can follow chefs and rate recipes.',
-      tech: ['Angular', 'Node.js', 'MySQL', 'AWS S3', 'Elasticsearch'],
-      image: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-      github: 'https://github.com/alexjohnson/recipe-platform',
-      demo: 'https://recipe-platform-demo.vercel.app',
+      title: 'Job Portal',
+      description: 'A user-friendly job portal with a focus on UI/UX design, enabling job seekers and employers to connect seamlessly.',
+      longDescription: 'This job portal offers an intuitive interface for job seekers to browse opportunities and for employers to post jobs. The project emphasizes exceptional UI/UX design, ensuring accessibility, responsiveness, and a seamless user experience across devices.',
+      tech: ['UI/UX Design', 'Prototyping', 'Figma', 'Adobe XD'],
+      image: 'https://cdn.dribbble.com/userupload/8151513/file/original-f17a064d24ac2423bc6ec7652f93035a.jpg?resize=400x0',
+      github: 'https://github.com/yourusername/job-portal',
+      demo: 'https://job-portal-demo.vercel.app',
       featured: false,
       status: 'Live',
-      category: 'Full Stack'
+      category: 'UI/UX Design'
     },
     {
       id: 6,
-      title: 'Fitness Tracking App',
-      description: 'A mobile-first fitness tracking application with workout plans, progress tracking, and social features.',
-      longDescription: 'This comprehensive fitness app helps users track workouts, set goals, and connect with fitness communities. Features include custom workout plans, progress analytics, social challenges, and integration with wearable devices.',
-      tech: ['React Native', 'Firebase', 'Node.js', 'Chart.js', 'Expo'],
-      image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-      github: 'https://github.com/alexjohnson/fitness-tracker',
-      demo: 'https://fitness-tracker-demo.vercel.app',
+      title: 'E-Learning Portal',
+      description: 'A modern e-learning platform with a focus on UI/UX design, offering a seamless learning experience for students and educators.',
+      longDescription: 'This e-learning platform provides a user-friendly environment for online education, featuring course management, interactive quizzes, and progress tracking. The project prioritizes UI/UX design to ensure an engaging and accessible experience for all users.',
+      tech: ['UI/UX Design', 'Prototyping', 'Figma', 'Adobe XD'],
+      image: 'https://cdn.dribbble.com/userupload/4625577/file/still-44307d3c41581af28cbb1d22448df5b4.png?format=webp&resize=400x300&vertical=center',
+      github: 'https://github.com/yourusername/elearning-portal',
+      demo: 'https://elearning-portal-demo.vercel.app',
       featured: false,
       status: 'Live',
-      category: 'Mobile'
-    },
-  ]
+      category: 'UI/UX Design'
+    }
+]
 
   const featuredProjects = projects.filter(project => project.featured)
   const otherProjects = projects.filter(project => !project.featured)
@@ -126,13 +126,13 @@ const Projects = () => {
       }`}
       whileHover={{ scale: 1.02, y: -10 }}
     >
-      <div className="relative group overflow-hidden"> {/* Fixed: Changed from overflow-visible to overflow-hidden */}
+      <div className="relative group overflow-hidden">
         <img
           src={project.image}
           alt={project.title}
           className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-end justify-center pb-6 z-10"> {/* Added z-10 for overlay priority */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-end justify-center pb-6 z-10">
           <motion.button
             onClick={() => setSelectedProject(project)}
             className="btn-primary px-8 py-3 text-lg font-semibold rounded-2xl flex items-center gap-3 cursor-hover shadow-2xl bg-opacity-90"
@@ -144,8 +144,7 @@ const Projects = () => {
           </motion.button>
         </div>
         
-        {/* Status and Category Badges */}
-        <div className="absolute top-4 left-4 flex gap-2 z-20"> {/* Added z-20 to ensure badges stay on top */}
+        <div className="absolute top-4 left-4 flex gap-2 z-20">
           <span className={`px-3 py-1 rounded-full text-sm font-semibold ${getStatusColor(project.status)}`}>
             {project.status}
           </span>
@@ -155,7 +154,7 @@ const Projects = () => {
         </div>
 
         {featured && (
-          <div className="absolute top-4 right-4 bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-3 py-1 rounded-full text-sm font-bold flex items-center gap-1 z-20"> {/* Added z-20 */}
+          <div className="absolute top-4 right-4 bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-3 py-1 rounded-full text-sm font-bold flex items-center gap-1 z-20">
             <Star className="w-4 h-4 fill-current" />
             Featured
           </div>
@@ -189,22 +188,20 @@ const Projects = () => {
         <div className="flex gap-4">
           <motion.a
             href={project.github}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 px-6 py-3 glass rounded-2xl text-slate-600 dark:text-slate-400 hover:text-blue-500 dark:hover:text-blue-400 transition-all duration-300 font-semibold cursor-hover"
+            className="flex items-center gap-2 px-6 py-3 glass rounded-2xl text-slate-600 dark:text-slate-400 opacity-50 cursor-not-allowed"
             whileHover={{ scale: 1.05, y: -3 }}
             whileTap={{ scale: 0.95 }}
+            aria-disabled="true"
           >
             <Github size={20} />
             Code
           </motion.a>
           <motion.a
             href={project.demo}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 px-6 py-3 glass rounded-2xl text-slate-600 dark:text-slate-400 hover:text-blue-500 dark:hover:text-blue-400 transition-all duration-300 font-semibold cursor-hover"
+            className="flex items-center gap-2 px-6 py-3 glass rounded-2xl text-slate-600 dark:text-slate-400 opacity-50 cursor-not-allowed"
             whileHover={{ scale: 1.05, y: -3 }}
             whileTap={{ scale: 0.95 }}
+            aria-disabled="true"
           >
             <ExternalLink size={20} />
             Demo
@@ -235,7 +232,6 @@ const Projects = () => {
           </p>
         </motion.div>
 
-        {/* Featured Projects */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -257,7 +253,6 @@ const Projects = () => {
           </div>
         </motion.div>
 
-        {/* Other Projects */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -277,7 +272,6 @@ const Projects = () => {
           </div>
         </motion.div>
 
-        {/* Project Modal */}
         {selectedProject && (
           <motion.div
             initial={{ opacity: 0 }}
@@ -340,22 +334,20 @@ const Projects = () => {
                 <div className="flex gap-4">
                   <motion.a
                     href={selectedProject.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="btn-primary flex items-center gap-3 px-8 py-4 text-lg font-semibold rounded-2xl cursor-hover"
+                    className="btn-primary flex items-center gap-3 px-8 py-4 text-lg font-semibold rounded-2xl opacity-50 cursor-not-allowed"
                     whileHover={{ scale: 1.05, y: -3 }}
                     whileTap={{ scale: 0.95 }}
+                    aria-disabled="true"
                   >
                     <Github size={24} />
                     View Code
                   </motion.a>
                   <motion.a
                     href={selectedProject.demo}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="btn-secondary flex items-center gap-3 px-8 py-4 text-lg font-semibold rounded-2xl cursor-hover"
+                    className="btn-secondary flex items-center gap-3 px-8 py-4 text-lg font-semibold rounded-2xl opacity-50 cursor-not-allowed"
                     whileHover={{ scale: 1.05, y: -3 }}
                     whileTap={{ scale: 0.95 }}
+                    aria-disabled="true"
                   >
                     <ExternalLink size={24} />
                     Live Demo
