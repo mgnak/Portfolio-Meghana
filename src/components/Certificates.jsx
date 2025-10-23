@@ -48,7 +48,20 @@ const Certificates = () => {
       featured: false
     },
     {
-      id: 4,
+    id: 4,
+    title: 'AWS Cloud Practitioner Essentials course',
+    issuer: 'AWS Skill Builder',
+    date: '2025',
+    description: 'It is a foundational training program that covers key AWS Cloud concepts, security, architecture, pricing, and support.',
+    image: 'https://plus.unsplash.com/premium_photo-1733306493254-52b143296396?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1393',
+    credential: 'COUR-PD-2024-123',
+    skills: ['AWS services', 'cloud concepts', 'core services', 'security', 'architecture', 'pricing'],
+    url: 'https://drive.google.com/file/d/1sUZWhXTBgUHiXOfIOdcuEX_QmBvK763X/view',
+    level: 'Beginners',
+    featured: false
+  },
+    {
+      id: 5,
       title: 'React Basics',
       issuer: 'Meta',
       date: '2024',
@@ -61,7 +74,7 @@ const Certificates = () => {
       featured: false
     },
     {
-      id: 5,
+      id: 6,
       title: 'Google AI Essentials',
       issuer: 'Coursera',
       date: '2024',
@@ -74,7 +87,7 @@ const Certificates = () => {
       featured: false
     },
     {
-      id: 6,
+      id: 7,
       title: 'Flutter & Firebase Chat App: Master Flutter and Firebase',
       issuer: 'Udemy',
       date: '2024',

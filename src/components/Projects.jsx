@@ -186,26 +186,26 @@ const Projects = () => {
         </div>
         
         <div className="flex gap-4">
-          <motion.a
-            href={project.github}
+          <motion.button
             className="flex items-center gap-2 px-6 py-3 glass rounded-2xl text-slate-600 dark:text-slate-400 opacity-50 cursor-not-allowed"
+            disabled
+            aria-disabled="true"
             whileHover={{ scale: 1.05, y: -3 }}
             whileTap={{ scale: 0.95 }}
-            aria-disabled="true"
           >
             <Github size={20} />
             Code
-          </motion.a>
-          <motion.a
-            href={project.demo}
+          </motion.button>
+          <motion.button
             className="flex items-center gap-2 px-6 py-3 glass rounded-2xl text-slate-600 dark:text-slate-400 opacity-50 cursor-not-allowed"
+            disabled
+            aria-disabled="true"
             whileHover={{ scale: 1.05, y: -3 }}
             whileTap={{ scale: 0.95 }}
-            aria-disabled="true"
           >
             <ExternalLink size={20} />
             Demo
-          </motion.a>
+          </motion.button>
         </div>
       </div>
     </motion.div>
@@ -332,26 +332,26 @@ const Projects = () => {
                 </div>
                 
                 <div className="flex gap-4">
-                  <motion.a
-                    href={selectedProject.github}
+                  <motion.button
                     className="btn-primary flex items-center gap-3 px-8 py-4 text-lg font-semibold rounded-2xl opacity-50 cursor-not-allowed"
+                    disabled
+                    aria-disabled="true"
                     whileHover={{ scale: 1.05, y: -3 }}
                     whileTap={{ scale: 0.95 }}
-                    aria-disabled="true"
                   >
                     <Github size={24} />
                     View Code
-                  </motion.a>
-                  <motion.a
-                    href={selectedProject.demo}
+                  </motion.button>
+                  <motion.button
                     className="btn-secondary flex items-center gap-3 px-8 py-4 text-lg font-semibold rounded-2xl opacity-50 cursor-not-allowed"
+                    disabled
+                    aria-disabled="true"
                     whileHover={{ scale: 1.05, y: -3 }}
                     whileTap={{ scale: 0.95 }}
-                    aria-disabled="true"
                   >
                     <ExternalLink size={24} />
                     Live Demo
-                  </motion.a>
+                  </motion.button>
                 </div>
               </div>
             </motion.div>

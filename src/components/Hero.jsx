@@ -55,9 +55,9 @@ const Hero = () => {
                 sequence={[
                   'Fresh IT graduate',
                   2000,
-                  'Full Stack Developer',
+                   'AIML Enthusiast',
                   2000,
-                  'Backend Developer',
+                  'Java Backend Developer',
                   2000,
                   'UI/UX Designer',
                   2000                  
@@ -75,10 +75,11 @@ const Hero = () => {
             transition={{ delay: 0.4, duration: 0.6 }}
             className="text-lg md:text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto leading-relaxed"
           >
-            Passionate about creating innovative web solutions with modern technologies. 
-            I specialize in React, Java, and Spring Boot to build scalable, 
-            user-friendly applications that make a difference.
-            Interested in UI?UX design tools.
+            As a fresher enthusiastic about crafting innovative web solutions,
+            I am eager to leverage modern technologies to build impactful applications.
+            I am gaining expertise in Python, Java, and Spring Boot, focusing on creating 
+            scalable and user-friendly solutions. Additionally, I am passionate about exploring
+            UI/UX design tools to enhance the user experience of my projects.
           </motion.p>
 
           <motion.div
